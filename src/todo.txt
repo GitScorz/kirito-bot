@@ -1,0 +1,21 @@
+T - To do
+I - In progress
+F - Finished
+
+Alliance [F]
+Crates [F]
+Gold [F]
+Help [F]
+Inventory [F]
+Match [F]
+Ping [F]
+Shop [F]
+Start [F]
+Stats [F]
+Train [F]
+
+
+// NEW //
+
+Season [T]
+
