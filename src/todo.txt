@@ -11,7 +11,7 @@ Match [F]
 Ping [F]
 Shop [F]
 Start [F]
-Stats [F]
+Profile [F]
 Train [F]
 
 

@@ -20,7 +20,7 @@ module.exports = {
 		if (args.length === 0) {
 			let e = new MessageEmbed()
 				.setAuthor("Matchmaking")
-				.setDescription("There are `" + queueLength + "` users searching for a match!\n\nTo search for a match do `"+ prefix +"match find`\nIf you want to see your stats do `"+ prefix +"stats`")
+				.setDescription("There are `" + queueLength + "` users searching for a match!\n\nTo search for a match do `"+ prefix +"match find`\nIf you want to see your stats do `"+ prefix +"profile`")
 				.setColor([11, 61, 94])
 			message.channel.send(e);
 		}
