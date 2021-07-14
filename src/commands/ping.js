@@ -5,7 +5,10 @@ module.exports = {
 	description: 'Get the bot ping!',
     category: 'Utility',
 	async execute(client, message, args) {
-        let m = await message.channel.send("Calculating..");
+        let a = new MessageEmbed()
+            .setDescription("Calculating..")
+            .setColor([11, 61, 94])
+        let m = await message.channel.send(a);
 
         let e = new MessageEmbed()
             .setAuthor("Latency!", client.user.avatarURL({ dynamic: true }))
