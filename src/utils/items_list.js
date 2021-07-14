@@ -14,7 +14,7 @@ items["fishingrod"] = { displayName: "Fishing Rod", description: "Lets fish!", p
 items["sword"] = { displayName: "Sword", description: "A cool sword", price: 150, usable: false };
 items["helmet"] = { displayName: "Helmet", description: "This protect you from being hit in the head!", price: 250, usable: false };
 items["chestplate"] = { displayName: "Chestplate", description: "A cool chestplate!", price: 400, usable: false };
-items["leggings"] = { displayName: "Leggings", description: "Protect your lower body", price: 350, usable: false };
+items["pants"] = { displayName: "pants", description: "Protect your lower body", price: 350, usable: false };
 items["boots"] = { displayName: "Boots", description: "Achilles' heel", price: 200, usable: false };
 
 // Crates

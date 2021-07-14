@@ -6,6 +6,7 @@ const { ErrorEmbed, GetDisplayName, IsValidItem, GetGuildPrefix } = require('../
 module.exports = {
 	name: 'inventory',
 	description: 'In inventory you can see the items that you have and use them!',
+	usage: "use [item]",
 	category: 'Game',
 	async execute(client, message, args) {
         let user = message.author;
@@ -59,8 +60,8 @@ module.exports = {
 					invInfo += `\nYou are you using your **helmet**!`
 				}
 		
-				if (items[i] == "leggings") {
-					invInfo += `\nYou are you using your **leggings**!`
+				if (items[i] == "pants") {
+					invInfo += `\nYou are you using your **pants**!`
 				}
 			}
 

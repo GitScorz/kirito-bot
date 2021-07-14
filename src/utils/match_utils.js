@@ -107,7 +107,7 @@ async function CalculateWin(userId, oponentId, userHealth, oponentHealth, userTr
             userChance = userChance + 20
         }
 
-        if (userItemId[i] == "leggings") {
+        if (userItemId[i] == "pants") {
             userChance = userChance + 10
         }
     }
@@ -125,7 +125,7 @@ async function CalculateWin(userId, oponentId, userHealth, oponentHealth, userTr
             oponentChance = oponentChance + 20
         }
 
-        if (oponentItemId[i] == "leggings") {
+        if (oponentItemId[i] == "pants") {
             oponentChance = oponentChance + 10
         }
     }
