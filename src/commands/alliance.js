@@ -229,8 +229,12 @@ module.exports = {
 
 			if (args[0].toLowerCase() === "list") {
 				let page = 1;
-  
-				const m = await message.channel.send("Getting alliances...");
+
+				let ga = new MessageEmbed()
+					.setDescription("Getting alliances...")
+					.setColor([11, 61, 94])
+
+				const m = await message.channel.send(ga);
 				
 				let is = true;
 				p(message, m, client, is, page);
@@ -238,8 +242,61 @@ module.exports = {
 		}
 
 		async function p(message, m, client, is, page) {
-			let roles = message.guild.roles.cache.array();
-			console.log(roles)
+			let alliances = await Alliance.find({});
+
+			let msg = "Total alliances: **" + alliances.length + "**\n";
+			msg += "\nPage: **" + page + "**\n";
+
+			let start = 0 + ((page - 1) * 10);
+  			let last = 10 + ((page - 1) * 10);
+
+			let pages = Math.ceil(alliances.length/10);
+			if (page > pages) {
+				msg += "\n:x: There is no more alliances to show! :x:";
+			}
+			
+			for (let i = start; i<last; i++) {
+				if (i < alliances.length) {
+					msg += "\n__" + alliances[i].name + "__ (`" + alliances[i].users + "/10`)";
+				}
+			}
+
+			msg += "\n\n";
+			if (page > 1) {
+				msg += "Change to the previous page with ◀!\n";
+			}
+			msg += "Change to the next page with ▶!\n";
+
+			let embed = new MessageEmbed()
+				.setAuthor("Alliances List")
+				.setColor([11, 61, 94])
+				.setDescription(msg);
+			
+			await m.edit(embed);
+
+			await m.reactions.removeAll();
+			if (page > 1) {
+				await m.react("◀");
+			}
+			await m.react("▶");
+			
+			is = true;
+			
+			const reactions = await m.awaitReactions(reaction => {
+				let a = reaction.users.cache.array();
+				if ((a[1] === message.author) && (is === true)) {
+				if ((reaction.emoji.name === "▶")) {
+					page += 1;
+					p(message, m, client, is, page);
+					is = false;
+				}
+				if ((reaction.emoji.name === "◀")) {
+					page -= 1;
+					p(message, m, client, is, page);
+					is = false;
+				}
+				}
+			}, {time: 60000});
 		}
 	},
 };
