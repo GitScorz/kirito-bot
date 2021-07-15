@@ -238,7 +238,7 @@ module.exports = {
 		}
 
 		async function p(message, m, client, is, page) {
-			let roles = message.guild.roles.array();
+			let roles = message.guild.roles.cache.array();
 			console.log(roles)
 		}
 	},
