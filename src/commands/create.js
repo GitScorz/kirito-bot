@@ -6,6 +6,7 @@ module.exports = {
 	name: 'create',
 	description: 'Create your character!',
         category: 'Game',
+        usage: '[character_name]',
 	async execute(client, message, args) {
         const user = message.author;
         const uid = user.id

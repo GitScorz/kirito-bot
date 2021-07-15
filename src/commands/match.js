@@ -9,6 +9,7 @@ module.exports = {
 	name: 'match',
 	description: 'Fight with random people!',
 	category: 'Game',
+	usage: 'find',
 	async execute(client, message, args) {
 		let user = message.author;
 

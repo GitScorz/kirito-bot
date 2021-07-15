@@ -6,6 +6,7 @@ module.exports = {
 	name: 'prefix',
 	description: 'Prefix!',
     category: 'Moderation',
+    usage: '[prefix]',
 	async execute(client, message, args) {
         let member = message.member;
         let user = message.author;

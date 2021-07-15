@@ -28,11 +28,18 @@ module.exports = {
 				let cmd = client.commands.get(command);
 				if (!cmd) return ErrorEmbed(message.channel, user, "no such command `" + command + "`.")
 
+				let msg = `Description: \`${cmd.description}\``
+
+				if (cmd.usage) {
+					msg += `\nUsage: \`${cmd.usage}\``
+				} else {
+					msg += `\nUsage: \`No usage\``
+				}
+
 				let h = new MessageEmbed()
 					.setAuthor("Help for " + command)
 					.setColor([11, 61, 94])
-					.setDescription(`\nDescription: \`${cmd.description}\``
-					+ `\nUsage: \`${cmd.usage}\``);
+					.setDescription(msg);
 				message.channel.send(h)
 			}
 		}

@@ -15,6 +15,7 @@ module.exports = {
 	name: 'alliance',
 	description: 'Join or create a new alliance and dominate!',
 	category: 'Game',
+	usage: 'create/join/list',
 	async execute(client, message, args) {
         let user = message.author;
 

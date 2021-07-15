@@ -8,6 +8,7 @@ module.exports = {
 	name: 'crates',
 	description: 'Open crates!',
 	category: 'Game',
+	usage: 'open [crate]',
 	async execute(client, message, args) {
 		let user = message.author;
 
