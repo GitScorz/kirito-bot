@@ -28,7 +28,7 @@ module.exports = {
 			if (characterDB.alliance === "None") {
 				let e = new MessageEmbed()
 					.setAuthor("Alliances", user.displayAvatarURL({ dynamic: true }))
-					.setDescription(`Hey **${user.username}** you don't have an alliance join one with \`${prefix}alliance join <name>\`\nTo see the alliances you can use \`${prefix}alliance list\`\nIf you feel you don't like the other alliances do \`${prefix}alliance create\``)
+					.setDescription(`Hey **${user.username}** you don't have an alliance join one with \`${prefix}alliance join <name>\`\n\nTo see the alliances you can use \`${prefix}alliance list\`\nIf you feel you don't like the other alliances do \`${prefix}alliance create\``)
 					.setColor([11, 61, 94])
 
 				message.channel.send(e)
@@ -226,6 +226,21 @@ module.exports = {
 					await Alliance.findOneAndUpdate({ name: alliance }, { minimumWins: newWins });
 				}
 			}
+
+			if (args[0].toLowerCase() === "list") {
+				let page = 1;
+  
+				const m = await message.channel.send("Getting alliances...");
+				
+				let is = true;
+				p(message, m, client, is, page);
+			}
+		}
+
+		async function p(message, m, client, is, page) {
+			let roles = message.guild.roles.array();
+			console.log(roles)
 		}
 	},
 };
+

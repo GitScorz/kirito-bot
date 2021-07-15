@@ -4,7 +4,7 @@ const { ErrorEmbed, GetGuildPrefix } = require('../utils/utils');
 
 module.exports = {
 	name: 'profile',
-	description: 'Your profile!',
+	description: 'Shows your profile!',
 	category: 'Game',
 	async execute(client, message, args) {
 		let user = message.author;
