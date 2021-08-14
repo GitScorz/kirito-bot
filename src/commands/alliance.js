@@ -3,14 +3,6 @@ const { ErrorEmbed, GetGuildPrefix } = require('../utils/utils');
 const Alliance = require('../schemas/AllianceSchema');
 const Character = require('../schemas/CharacterSchema');
 
-
-// Criar sistema de ver os gajos da aliança (talvez checkar todos os gajos que tem aquela aliança nos charactersDB)
-// Procurar aliança sei la fazer uma lista?
-// Pagar para criar uma aliança
-// Criar sistema para meter o minimo de batalhas ganhas e colocar privado ou publico..
-// Se ele tiver numa aliança nao pode criar ou entrar noutras
-
-
 module.exports = {
 	name: 'alliance',
 	description: 'Join or create a new alliance and dominate!',

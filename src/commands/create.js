@@ -32,8 +32,6 @@ module.exports = {
                                 + "\nTroops: `200` <:swordman:851863017389686804>"
                                 + "\nAlliance: `None` <:shield:851859680786907166>"
                                 + "\n\nYou just created your character, congratulations! You can explore more by using `" + prefix + "help`")
-                .setFooter("This is a Beta version :)")
-                //.setDescription("Cool your name will be **" + Name + "**, now choose the type of city hall\nYou can choose between these options\n\n`Japanese`, `British`, `Arabia`")
 
         message.channel.send(creationFirst)
 
