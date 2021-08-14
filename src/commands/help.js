@@ -16,7 +16,7 @@ module.exports = {
 				.setAuthor("Help", user.displayAvatarURL())
 				.setDescription("The current guild prefix is: `" + prefix + "`\nUse `" + prefix + "help <command>` to receive help for any command!")
 				.setColor([11, 61, 94])
-				.addField("General", "`help`, `ping`, `report`")
+				.addField("General", "`help`, `ping`, `report`, `botstats`")
 				.addField("Game", "`create`, `alliance`, `daily`, `match`, `inventory`, `profile`, `train`, `crates`")
 				.addField("Moderation", "`prefix`")
 			message.channel.send(e)
